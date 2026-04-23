@@ -1,0 +1,34 @@
+{
+  "name": "captcha-canvas",
+  "version": "3.4.0",
+  "description": "A captcha generator by using skia-canvas module.",
+  "main": "index.js",
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shashank3736/captcha-canvas.git"
+  },
+  "keywords": [
+    "captcha",
+    "skia-canvas",
+    "image",
+    "generator",
+    "wick"
+  ],
+  "author": "Shashank3736",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/Shashank3736/captcha-canvas/issues"
+  },
+  "homepage": "https://captcha-canvas.js.org/",
+  "directories": {
+    "doc": "docs",
+    "example": "examples"
+  },
+  "dependencies": {
+    "skia-canvas": "^3.0.8"
+  },
+  "types": "index.d.ts"
+}

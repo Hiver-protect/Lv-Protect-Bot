@@ -1,0 +1,23 @@
+{
+  "name": "bot-protect-lv",
+  "version": "1.0.0",
+  "description": "Bot Discord avancé : anti-raid, tickets, vérification, rôles automatiques, logs.",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@discordjs/builders": "^1.7.0",
+    "@discordjs/rest": "^2.3.0",
+    "@discordjs/voice": "^0.16.0",
+    "captcha-canvas": "^3.0.7",
+    "discord.js": "^14.14.1",
+    "dotenv": "^16.6.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
