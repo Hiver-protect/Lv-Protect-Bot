@@ -16,20 +16,29 @@ const client = new Client({
 
 client.commands = new Collection();
 
-// Command handler
-fs.readdirSync('./src/commands').filter(file => file.endsWith('.js')).forEach(file => {
-  const command = require(`./commands/${file}`);
-  client.commands.set(command.data.name, command);
-});
+// Commands
+fs.readdirSync('./src/commands')
+  .filter(file => file.endsWith('.js'))
+  .forEach(file => {
+    const command = require(`./src/commands/${file}`);
+    if (command?.data?.name) {
+      client.commands.set(command.data.name, command);
+    } else {
+      console.log(`Commande invalide: ${file}`);
+    }
+  });
 
-// Event handler
-fs.readdirSync('./src/events').filter(file => file.endsWith('.js')).forEach(file => {
-  const event = require(`./events/${file}`);
-  if (event.once) {
-    client.once(event.name, (...args) => event.execute(...args, client));
-  } else {
-    client.on(event.name, (...args) => event.execute(...args, client));
-  }
-});
+// Events
+fs.readdirSync('./src/events')
+  .filter(file => file.endsWith('.js'))
+  .forEach(file => {
+    const event = require(`./src/events/${file}`);
+
+    if (event.once) {
+      client.once(event.name, (...args) => event.execute(...args, client));
+    } else {
+      client.on(event.name, (...args) => event.execute(...args, client));
+    }
+  });
 
 client.login(process.env.DISCORD_TOKEN);

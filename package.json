@@ -7,7 +7,7 @@
     "start": "node src/index.js",
     "dev": "nodemon src/index.js"
   },
-  "author": "",
+  "author": "Lv Creations",
   "license": "MIT",
   "dependencies": {
     "@discordjs/builders": "^1.7.0",
