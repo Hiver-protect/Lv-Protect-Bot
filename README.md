@@ -41,3 +41,4 @@ Bot Discord professionnel multi-serveur (Node.js, discord.js)
 ## Licence
 MIT
 # Lv-Protect-Bot
+# HIverGuard2.0
